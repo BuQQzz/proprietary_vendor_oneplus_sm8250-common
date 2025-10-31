@@ -178,7 +178,9 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libc++",
+                "libcrypto",
                 "libcutils",
+                "libion",
                 "liblog",
                 "libutils",
                 "libc",
