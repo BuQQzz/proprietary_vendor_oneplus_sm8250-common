@@ -62,9 +62,13 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libkeymasterdeviceutils.so",
             ],
             shared_libs: [
+                "libQSEEComAPI",
                 "libc++",
+                "libcrypto",
                 "libcutils",
+                "libion",
                 "liblog",
+                "libspcom",
                 "libutils",
                 "libc",
                 "libm",
@@ -89,7 +93,9 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libkeymasterutils.so",
             ],
             shared_libs: [
+                "libQSEEComAPI",
                 "libc++",
+                "libcrypto",
                 "libcutils",
                 "liblog",
                 "libutils",
@@ -123,6 +129,60 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libion",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libion.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libQSEEComAPI",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libQSEEComAPI.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libspcom",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libspcom.so",
             ],
         },
     },
