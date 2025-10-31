@@ -148,6 +148,16 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libQSEEComAPI.so",
             ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "libion",
+                "liblog",
+                "libutils",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "64",
@@ -165,6 +175,15 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libspcom.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
