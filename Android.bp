@@ -61,6 +61,15 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libkeymasterdeviceutils.so",
             ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "64",
@@ -79,6 +88,15 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libkeymasterutils.so",
             ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "64",
@@ -96,6 +114,15 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libqcbor.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
