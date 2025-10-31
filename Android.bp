@@ -14,3 +14,21 @@ soong_namespace {
         "vendor/qcom/opensource/display",
     ],
 }
+
+cc_prebuilt_library_shared {
+    name: "libqtikeymaster4",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqtikeymaster4.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
